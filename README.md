@@ -18,6 +18,7 @@ Configurar a base:
  ```docker run -d --restart=always --hostname rabbitmq --name rabbitmq -p 8080:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:4.1-management-alpine```
 
 # Ambiente virtual 
+
 1. Criar um ambiente virtual para isolar o projeto:
 
     ```python -m venv venv```
@@ -41,12 +42,15 @@ Configurar a base:
 
 
 # Execução 
+
 A execução precisa ser realizada através do Nameko
 
 1. Executar através do Nameko: 
+
  ```nameko run ServiceUsuario --config config.yaml```
 
 # Testes
+
 1. Em um novo terminal, execute o comando abaixo para abrir um shell nameko (não esqueça do venv):
  ```nameko shell --config config.yaml```
 

@@ -1,8 +1,10 @@
+#configuração do rabbit usando protocolo AMQP (Advanced Message Queuing Protocol)
 AMQP_URI: amqp://${RABBIT_USER:user}:${RABBIT_PASSWORD:password}@${RABBIT_HOST:localhost}:${RABBIT_PORT:5672}/
 
+#configuração com banco de dados - gerenciamento de conexões
 DB_URIS: 
   'service_usuario:Base': 'mysql+pymysql://root:password@localhost:3306/abcBolinhas?charset=utf8'
 
-rpc_exchange: 'nameko-rpc'
-max_workers: 10
-parent_calls_tracked: 10
+rpc_exchange: 'nameko-rpc' # Define onde as mensagens RPC serão publicadas e consumidas
+max_workers: 10 #Cada worker pode processar uma requisição por vez
+parent_calls_tracked: 10 #Mantém histórico das últimas 10 chamadas para análise de problemas
