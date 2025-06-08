@@ -1,0 +1,8 @@
+# Ignora o ambiente virtual
+venv/
+
+# Ignora o arquivo de dependências do Python
+requirements.txt
+
+# Ignora caches
+__pycache__/
