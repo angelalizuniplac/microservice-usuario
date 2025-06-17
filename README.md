@@ -41,7 +41,7 @@ Configurar a base:
  ```pip freeze > requirements.txt```
 
 
-# Execução 
+# Execução do serviço de usuario
 
 A execução precisa ser realizada através do Nameko
 
@@ -68,4 +68,27 @@ A execução precisa ser realizada através do Nameko
 >>> n.rpc.service_usuario.GetUser(event={'id': '2'})
 
 >>> n.rpc.service_usuario.GetUser(event={'id': '1'}) 
+```
+
+# Execução do serviço de funções
+A execução precisa ser realizada através do Nameko
+
+1. Executar através do Nameko: 
+
+ ```nameko run ServiceFuncoes --config config.yaml```
+
+# Testes
+
+1. Em um novo terminal, execute o comando abaixo para abrir um shell nameko (não esqueça do venv):
+
+ ```nameko shell --config config.yaml```
+
+2. No mesmo terminal, para fazer chamadas rcp e testar o serviço execute um por vez:
+
+```
+>>> n.rpc.service_funcoes.ValidaEmail(event={'email': 'abc@123'})
+>>> n.rpc.service_funcoes.ValidaEmail(event={'email': 'abc@123.com'})
+>>> n.rpc.service_funcoes.ValidaEmail(event={'email': 'abc123.com'})
+>>> n.rpc.service_funcoes.ValidaEmail(event={'email': 'abc@123.net'})
+>>> n.rpc.service_funcoes.ValidaEmail(event={'email': 'abc@123.'})
 ```
