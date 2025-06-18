@@ -14,6 +14,9 @@ Ps: não esqueça do ponto no final . que indica que o dockerfile está no diret
 
 ``` docker build -t microservice_funcoes .```
 
+Faça autenticação local com o seu repositorio do docker hub 
+```docker login --username=angeladlizuniplac```
+
 4. Com a imagem criada, gere a tag: 
 
 ```docker tag microservice_usuario angeladlizuniplac/microservice_usuario```
