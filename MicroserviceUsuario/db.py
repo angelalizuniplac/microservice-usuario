@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker #criar sessões de banco de dados
 import pymysql # Esta importação é necessária mesmo não sendo usada diretamente
 
 # Define a string de conexão com o banco de dados MySQL
-STR_DATABASE = f"mysql+pymysql://root:password@127.0.0.1/abcBolinhas?charset=utf8mb4"
+STR_DATABASE = f"mysql+pymysql://root:password@localhost/abcBolinhas?charset=utf8mb4"
 
 # Cria o engine (motor) de conexão com o banco de dados
 # - engine é o ponto de entrada principal do SQLAlchemy para interagir com o banco
